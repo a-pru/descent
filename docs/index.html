@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <meta name="title" content="DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction">
-  <meta name="description" content="A transformer-based architecture for airport surface movement prediction that uses Potential Reachable Set context sampling to adaptively encode airfield topology, achieving state-of-the-art accuracy on the Amelia-10 benchmark.">
-  <meta name="keywords" content="Motion Forecasting, Trajectory Prediction, Airport Surface Movement, Aviation, Computer Vision for Transportation">
+  <meta name="description"
+    content="A transformer-based architecture for airport surface movement prediction that uses Potential Reachable Set context sampling to adaptively encode airfield topology, achieving state-of-the-art accuracy on the Amelia-10 benchmark.">
+  <meta name="keywords"
+    content="Motion Forecasting, Trajectory Prediction, Airport Surface Movement, Aviation, Computer Vision for Transportation">
   <meta name="author" content="Alexander Prutsch, David Schinagl, Horst Possegger">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
+
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Institute of Visual Computing, Graz University of Technology">
   <meta property="og:title" content="DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction">
-  <meta property="og:description" content="A transformer-based architecture for airport surface movement prediction that uses Potential Reachable Set context sampling to adaptively encode airfield topology, achieving state-of-the-art accuracy on the Amelia-10 benchmark.">
+  <meta property="og:description"
+    content="A transformer-based architecture for airport surface movement prediction that uses Potential Reachable Set context sampling to adaptively encode airfield topology, achieving state-of-the-art accuracy on the Amelia-10 benchmark.">
   <meta property="og:url" content="https://a-pru.github.io/descent/">
   <meta property="og:image" content="https://a-pru.github.io/descent/static/images/preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction - Research Preview">
+  <meta property="og:image:alt"
+    content="DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction - Research Preview">
   <meta property="article:published_time" content="2026-08-26T12:00:00.000Z">
   <meta property="article:author" content="Alexander Prutsch, David Schinagl, Horst Possegger">
   <meta property="article:section" content="Research">
@@ -32,48 +37,52 @@
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="IEEE/RSJ International Conference on Intelligent Robots and Systems">
   <meta name="citation_pdf_url" content="https://a-pru.github.io/descent/static/pdfs/prutsch_descent_iros2026.pdf">
-  
+
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-  <title>DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction - Alexander Prutsch, David Schinagl, Horst Possegger | Academic Research</title>
-  
+  <title>DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction - Alexander Prutsch, David
+    Schinagl, Horst Possegger | Academic Research</title>
+
   <!-- TODO: add static/images/descent.ico and re-enable these two lines -->
   <!-- <link rel="icon" type="image/x-icon" href="static/images/descent.ico"> -->
   <!-- <link rel="apple-touch-icon" href="static/images/descent.ico"> -->
-  
+
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-  
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -128,7 +137,7 @@
     ]
   }
   </script>
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -139,646 +148,942 @@
   }
   </script>
   <script>
-      window.MathJax = {
-        tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-      };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
 </head>
+
 <body>
 
   <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-fullhd">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction</h1>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://a-pru.github.io/" target="_blank">Alexander Prutsch</a>,</span>
-              <span class="author-block">
-                <a href="https://dschinagl.github.io/" target="_blank">David Schinagl</a>,</span>
-              <span class="author-block">
-                <a href="https://snototter.github.io/" target="_blank">Horst Possegger</a></span>
-            </div>
-
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                Institute of Visual Computing, Graz University of Technology <br>
-                IROS 2026
-              </span>
-            </div>
-
+    <section class="hero">
+      <div class="hero-body">
+        <div class="container is-fullhd">
+          <div class="columns is-centered">
             <div class="column has-text-centered">
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="static/pdfs/prutsch_descent_iros2026.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
+              <h1 class="title is-1 publication-title">DESCENT: Directed Edge Scene Encoding for Airport Surface
+                Movement Prediction</h1>
 
-                <!-- TODO: enable once the arXiv preprint is announced -->
-                <span class="link-block">
-                  <a class="external-link button is-normal is-rounded is-dark is-disabled" aria-disabled="true" title="Coming soon">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv (soon)</span>
-                  </a>
-                </span>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  <a href="https://a-pru.github.io/" target="_blank">Alexander Prutsch</a>,</span>
+                <span class="author-block">
+                  <a href="https://dschinagl.github.io/" target="_blank">David Schinagl</a>,</span>
+                <span class="author-block">
+                  <a href="https://snototter.github.io/" target="_blank">Horst Possegger</a></span>
+              </div>
 
-                <span class="link-block">
-                  <a href="https://github.com/a-pru/descent" target="_blank" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">
+                  Institute of Visual Computing, Graz University of Technology <br>
+                  IROS 2026
                 </span>
+              </div>
+
+              <div class="column has-text-centered">
+                <div class="publication-links">
+                  <span class="link-block">
+                    <a href="static/pdfs/prutsch_descent_iros2026.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Paper</span>
+                    </a>
+                  </span>
+
+                  <!-- TODO: enable once the arXiv preprint is announced -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2608.26002" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                      </span>
+                      <span>arXiv</span>
+                    </a>
+                  </span>
+
+                  <span class="link-block">
+                    <a href="https://github.com/a-pru/descent" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                      <span>Code</span>
+                    </a>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="hero teaser">
-    <div class="hero-body">
+    <section class="hero teaser">
+      <div class="hero-body">
+        <div class="container is-fullhd">
+          <div class="columns is-centered">
+            <div class="column is-4 has-text-centered">
+              <div class="teaser-video">
+                <video class="result-video" width="2000" height="2000" autoplay controls loop muted playsinline
+                  poster="static/images/posters/succ_kbos_00103.jpg">
+                  <source src="static/videos/clips_succ/succ_kbos_00103.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
       <div class="container is-fullhd">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-11">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified abstract-text">
+              <p>Advanced automation is a key technology for enhancing the safety of ground operations amidst the
+                increasing density of commercial air traffic. While motion forecasting is a well-studied task in
+                autonomous driving, its application to airport surface movements remains underexplored. To enable
+                efficient and accurate prediction in this domain, we propose DESCENT, a transformer-based architecture
+                designed to handle heterogeneous dynamics and strict topological constraints. Our approach features a
+                Potential Reachable Set (PRS) context sampling mechanism that adaptively collects airfield environment
+                context across diverse operational phases. Combined with a detection transformer-based decoder, DESCENT
+                generates accurate trajectory forecasts. Extensive evaluations on the Amelia-10 benchmark demonstrate
+                significant performance improvements over state-of-the-art baselines. These gains are especially
+                pronounced in safety-critical scenarios, where our domain-aware sampling provides critical long-horizon
+                context necessary for safe navigation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero">
+      <div class="container is-fullhd has-text-centered">
+        <h2 class="title is-3">Motivation and Contributions</h2>
         <div class="columns is-centered">
-          <div class="column is-4 has-text-centered">
-            <div class="teaser-video">
-              <video class="result-video" width="2000" height="2000" autoplay controls loop muted playsinline poster="static/images/posters/succ_kbos_00103.jpg">
-                <source src="static/videos/clips_succ/succ_kbos_00103.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
+          <div class="column is-11">
+            <div class="content has-text-left motivation-section">
+              <ul class="motivation-list">
+                <li>The continuous growth of commercial air traffic has substantially increased airport surface
+                  movements, raising runway occupancy rates and the complexity of traffic management</li>
+                <li>Critical situations such as runway incursions have become more frequent, and the risk is further
+                  intensified by air traffic control staffing shortages</li>
+                <li>Trajectory prediction allows conflicts to be detected early &mdash; verifying runway clearance
+                  during an aircraft's final approach, or flagging an aircraft taxiing across an active runway &mdash;
+                  so that timely warnings reach controllers and pilots</li>
+                <li>The ingredients are already in place: runways and taxiways provide structured map context, and
+                  System Wide Information Management (SWIM) provides the motion data</li>
+                <li>Amelia-TF demonstrated that autonomous-driving-inspired prediction architectures are feasible for
+                  airport surface operations, and the Amelia framework supplies a large-scale dataset (42 airports) with
+                  the Amelia-10 benchmark subset</li>
+                <li><strong>Challenges</strong>
+                  <ul class="motivation-sublist">
+                    <li>Airport surface movements exhibit a substantially broader dynamic range than road traffic,
+                      spanning low taxiing speeds up to takeoff and landing velocities</li>
+                    <li>Rapid accelerations, e.g. during a rolling start, make motion dynamics highly context-dependent
+                      &mdash; they can change significantly within a few seconds</li>
+                    <li>Within one fixed temporal horizon, a predicted trajectory may cover only a few meters or extend
+                      over several kilometers, so the required map context varies by orders of magnitude</li>
+                    <li>Fixed-size regions of interest or a predefined number of nearest map tokens therefore either
+                      miss the long-horizon context of high-speed maneuvers or flood the model with irrelevant segments
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+
+              <h3 class="motivation-subtitle">Key Contributions</h3>
+
+              <div class="contribution-bullet">
+                <span class="contribution-text"><strong>A Potential Reachable Set-based scene context sampling that
+                    addresses the unique challenges of map context extraction in airport surface
+                    operations</strong></span>
+              </div>
+
+              <div class="contribution-bullet">
+                <span class="contribution-text"><strong>Integration of this sampling strategy into a novel trajectory
+                    prediction model (DESCENT), achieving state-of-the-art performance on the Amelia-10
+                    benchmark</strong></span>
+              </div>
+
+              <div class="contribution-bullet">
+                <span class="contribution-text"><strong>Comprehensive evaluations demonstrating the benefits of our
+                    approach, particularly for safety-critical agents, while maintaining low inference latency and
+                    effectively capturing long-horizon scene context</strong></span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section hero is-light">
-    <div class="container is-fullhd">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-11">
-          <h2 class="title is-3">Abstract</h2>
-          <div class="content has-text-justified abstract-text">
-            <p>Advanced automation is a key technology for enhancing the safety of ground operations amidst the increasing density of commercial air traffic. While motion forecasting is a well-studied task in autonomous driving, its application to airport surface movements remains underexplored. To enable efficient and accurate prediction in this domain, we propose DESCENT, a transformer-based architecture designed to handle heterogeneous dynamics and strict topological constraints. Our approach features a Potential Reachable Set (PRS) context sampling mechanism that adaptively collects airfield environment context across diverse operational phases. Combined with a detection transformer-based decoder, DESCENT generates accurate trajectory forecasts. Extensive evaluations on the Amelia-10 benchmark demonstrate significant performance improvements over state-of-the-art baselines. These gains are especially pronounced in safety-critical scenarios, where our domain-aware sampling provides critical long-horizon context necessary for safe navigation.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero">
-    <div class="container is-fullhd has-text-centered">
-      <h2 class="title is-3">Motivation and Contributions</h2>
-      <div class="columns is-centered">
-        <div class="column is-11">
-          <div class="content has-text-left motivation-section">
-            <ul class="motivation-list">
-              <li>The continuous growth of commercial air traffic has substantially increased airport surface movements, raising runway occupancy rates and the complexity of traffic management</li>
-              <li>Critical situations such as runway incursions have become more frequent, and the risk is further intensified by air traffic control staffing shortages</li>
-              <li>Trajectory prediction allows conflicts to be detected early &mdash; verifying runway clearance during an aircraft's final approach, or flagging an aircraft taxiing across an active runway &mdash; so that timely warnings reach controllers and pilots</li>
-              <li>The ingredients are already in place: runways and taxiways provide structured map context, and System Wide Information Management (SWIM) provides the motion data</li>
-              <li>Amelia-TF demonstrated that autonomous-driving-inspired prediction architectures are feasible for airport surface operations, and the Amelia framework supplies a large-scale dataset (42 airports) with the Amelia-10 benchmark subset</li>
-              <li><strong>Challenges</strong>
-                <ul class="motivation-sublist">
-                  <li>Airport surface movements exhibit a substantially broader dynamic range than road traffic, spanning low taxiing speeds up to takeoff and landing velocities</li>
-                  <li>Rapid accelerations, e.g. during a rolling start, make motion dynamics highly context-dependent &mdash; they can change significantly within a few seconds</li>
-                  <li>Within one fixed temporal horizon, a predicted trajectory may cover only a few meters or extend over several kilometers, so the required map context varies by orders of magnitude</li>
-                  <li>Fixed-size regions of interest or a predefined number of nearest map tokens therefore either miss the long-horizon context of high-speed maneuvers or flood the model with irrelevant segments</li>
-                </ul>
-              </li>
-            </ul>
-
-            <h3 class="motivation-subtitle">Key Contributions</h3>
-
-            <div class="contribution-bullet">
-              <span class="contribution-text"><strong>A Potential Reachable Set-based scene context sampling that addresses the unique challenges of map context extraction in airport surface operations</strong></span>
+    <section class="section hero is-light">
+      <div class="container is-fullhd has-text-centered">
+        <h2 class="title is-3">Approach</h2>
+        <div class="columns is-centered">
+          <div class="column is-11">
+            <div class="content has-text-left motivation-section">
+              <p>
+                Following the airport surface trajectory prediction task defined in the Amelia framework, DESCENT takes
+                historical observations over a past horizon of $H_p$ time steps together with airfield map data, and
+                predicts $k$ future trajectory hypotheses with associated confidence scores for a focal agent over a
+                future horizon $H_f$. The multimodal formulation accounts for the inherent uncertainty of taxiing
+                maneuvers, ensuring high coverage of potential future actions. The architecture is built on the
+                following core components:
+              </p>
+              <ul class="motivation-list">
+                <li><strong>Potential Reachable Set (PRS) Sampling:</strong> We define the PRS as the set of all
+                  airfield segments accessible from an agent's current location via a valid path in the lane graph.
+                  Unlike fixed regions of interest or top-<i>k</i> nearest tokens, this selects context adaptively from
+                  infrastructure constraints, keeping token counts manageable while preserving the information relevant
+                  for prediction.</li>
+                <li><strong>Directed Edge Map Representation:</strong> As a preprocessing step, raw map data is
+                  reorganized into semantically meaningful airfield segments. Consecutive graph edges belonging to the
+                  same structural element are merged while intersection nodes and edge directions are preserved to
+                  maintain topological consistency, and a type-dependent maximum segment length keeps granularity
+                  balanced.</li>
+                <li><strong>Type-Aware Traversal Depth:</strong> Reachable distance is bounded by lane-type-specific
+                  thresholds rather than instantaneous vehicle metrics, because current velocity poorly predicts future
+                  path length &mdash; an aircraft stationary at a runway threshold will cover far more ground over the
+                  next horizon than one taxiing toward a terminal. If a runway segment is involved, the entire runway is
+                  included to cover long-horizon takeoff and landing trajectories.</li>
+                <li><strong>Airfield Segment Encoding:</strong> Sampled segments $S \in \mathbb{R}^{N_s \times P_s
+                  \times 2}$ are normalized into a segment-centric local frame and encoded with a PointNet-like airfield
+                  encoder $f_A$, producing one token per segment.</li>
+                <li><strong>Motion Encoding:</strong> Agent observations $O \in \mathbb{R}^{N_a \times T_h \times D_m}$
+                  are transformed into a local frame defined by the most recent pose, projected into feature space,
+                  processed by temporal self-attention, and pooled over time into a compact per-agent token by a
+                  lightweight motion encoder $f_M$.</li>
+                <li><strong>Scene Encoding:</strong> Agent and map tokens are concatenated into a scene context $C \in
+                  \mathbb{R}^{(N_a+N_s) \times D}$, each augmented with a positional embedding $P_\text{emb}$ of its
+                  local frame pose and a categorical embedding $T_\text{emb}$ for segment type and agent class. An
+                  attention-based scene encoder $f_S$ then models the relational dependencies between the focal agent
+                  and all other scene elements.</li>
+                <li><strong>Trajectory Decoding:</strong> A decoder $f_D$ inspired by detection transformers applies
+                  factorized cross-attention from $k$ learnable mode queries $Q$ onto the encoded scene. The updated
+                  mode tokens parameterize a Gaussian Mixture Model, and shallow MLP heads emit trajectory means,
+                  variances, and confidence scores.</li>
+                <li><strong>SDF Map-Compliance Regularization:</strong> Because airport surface motion is constrained to
+                  predefined segments, training adds a signed distance field term. A rasterized SDF at 5&nbsp;m
+                  resolution stores the distance to the nearest airfield segment; predicted points are projected onto
+                  this grid and off-track predictions are penalized, promoting topologically feasible trajectories.</li>
+              </ul>
             </div>
 
-            <div class="contribution-bullet">
-              <span class="contribution-text"><strong>Integration of this sampling strategy into a novel trajectory prediction model (DESCENT), achieving state-of-the-art performance on the Amelia-10 benchmark</strong></span>
+            <div class="content has-text-centered">
+              <img src="static/images/overview.svg" alt="DESCENT architecture overview" loading="lazy"
+                style="width: 100%; min-width: 500px;" />
+              <p class="figure-caption">
+                Overview of the DESCENT architecture. PRS-based airfield map sampling provides the map context for the
+                current focal agent position. Agent observations $O$ and airfield segments $S$ are encoded by $f_M$ and
+                $f_A$; positional $P_\text{emb}$ and type $T_\text{emb}$ embeddings form the scene context $C$, which is
+                encoded by $f_S$. The decoder $f_D$ uses learnable queries $Q$ to produce output trajectories $T$ and
+                probability scores $P$.
+              </p>
             </div>
 
-            <div class="contribution-bullet">
-              <span class="contribution-text"><strong>Comprehensive evaluations demonstrating the benefits of our approach, particularly for safety-critical agents, while maintaining low inference latency and effectively capturing long-horizon scene context</strong></span>
+            <h3 class="title is-4 results-subtitle">Potential Reachable Set Sampling</h3>
+            <div class="content has-text-left motivation-section">
+              <p>
+                To extract the environmental context for a given vehicle, we first identify its current segment.
+                Candidates are selected by Euclidean distance and refined by a heading consistency constraint, which
+                avoids incorrect associations in dense intersection areas: if the closest segment's orientation deviates
+                significantly from the vehicle's heading, the next $n$ candidates are evaluated, defaulting to the
+                closest segment only if no angular match is found. From the current segment, a depth-first traversal of
+                the lane graph &mdash; constrained by domain-specific length thresholds &mdash; enumerates all
+                admissible paths. These are precomputed offline and stored as segment-ID metadata, so the map can be
+                filtered at test time with minimal computational overhead. A backward traversal from the focal agent's
+                current position additionally incorporates historical path context.
+              </p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-light">
-    <div class="container is-fullhd has-text-centered">
-      <h2 class="title is-3">Approach</h2>
-      <div class="columns is-centered">
-        <div class="column is-11">
-          <div class="content has-text-left motivation-section">
-            <p>
-              Following the airport surface trajectory prediction task defined in the Amelia framework, DESCENT takes historical observations over a past horizon of $H_p$ time steps together with airfield map data, and predicts $k$ future trajectory hypotheses with associated confidence scores for a focal agent over a future horizon $H_f$. The multimodal formulation accounts for the inherent uncertainty of taxiing maneuvers, ensuring high coverage of potential future actions. The architecture is built on the following core components:
-            </p>
-            <ul class="motivation-list">
-              <li><strong>Potential Reachable Set (PRS) Sampling:</strong> We define the PRS as the set of all airfield segments accessible from an agent's current location via a valid path in the lane graph. Unlike fixed regions of interest or top-<i>k</i> nearest tokens, this selects context adaptively from infrastructure constraints, keeping token counts manageable while preserving the information relevant for prediction.</li>
-              <li><strong>Directed Edge Map Representation:</strong> As a preprocessing step, raw map data is reorganized into semantically meaningful airfield segments. Consecutive graph edges belonging to the same structural element are merged while intersection nodes and edge directions are preserved to maintain topological consistency, and a type-dependent maximum segment length keeps granularity balanced.</li>
-              <li><strong>Type-Aware Traversal Depth:</strong> Reachable distance is bounded by lane-type-specific thresholds rather than instantaneous vehicle metrics, because current velocity poorly predicts future path length &mdash; an aircraft stationary at a runway threshold will cover far more ground over the next horizon than one taxiing toward a terminal. If a runway segment is involved, the entire runway is included to cover long-horizon takeoff and landing trajectories.</li>
-              <li><strong>Airfield Segment Encoding:</strong> Sampled segments $S \in \mathbb{R}^{N_s \times P_s \times 2}$ are normalized into a segment-centric local frame and encoded with a PointNet-like airfield encoder $f_A$, producing one token per segment.</li>
-              <li><strong>Motion Encoding:</strong> Agent observations $O \in \mathbb{R}^{N_a \times T_h \times D_m}$ are transformed into a local frame defined by the most recent pose, projected into feature space, processed by temporal self-attention, and pooled over time into a compact per-agent token by a lightweight motion encoder $f_M$.</li>
-              <li><strong>Scene Encoding:</strong> Agent and map tokens are concatenated into a scene context $C \in \mathbb{R}^{(N_a+N_s) \times D}$, each augmented with a positional embedding $P_\text{emb}$ of its local frame pose and a categorical embedding $T_\text{emb}$ for segment type and agent class. An attention-based scene encoder $f_S$ then models the relational dependencies between the focal agent and all other scene elements.</li>
-              <li><strong>Trajectory Decoding:</strong> A decoder $f_D$ inspired by detection transformers applies factorized cross-attention from $k$ learnable mode queries $Q$ onto the encoded scene. The updated mode tokens parameterize a Gaussian Mixture Model, and shallow MLP heads emit trajectory means, variances, and confidence scores.</li>
-              <li><strong>SDF Map-Compliance Regularization:</strong> Because airport surface motion is constrained to predefined segments, training adds a signed distance field term. A rasterized SDF at 5&nbsp;m resolution stores the distance to the nearest airfield segment; predicted points are projected onto this grid and off-track predictions are penalized, promoting topologically feasible trajectories.</li>
-            </ul>
-          </div>
-
-          <div class="content has-text-centered">
-            <img src="static/images/overview.svg" alt="DESCENT architecture overview" loading="lazy" style="width: 100%; min-width: 500px;"/>
+            <div class="columns is-centered is-multiline">
+              <div class="column is-3">
+                <img class="result-image prs-image" src="static/images/prs_1_current_segment.png"
+                  alt="Locating the agent's current airfield segment at KSFO" loading="lazy" />
+                <p class="figure-caption">1. Locate the agent's current airfield segment</p>
+              </div>
+              <div class="column is-3">
+                <img class="result-image prs-image" src="static/images/prs_2_traversal.png"
+                  alt="Graph traversal identifying reachable pathways at KSFO" loading="lazy" />
+                <p class="figure-caption">2. Traverse the lane graph to identify reachable pathways</p>
+              </div>
+              <div class="column is-3">
+                <img class="result-image prs-image" src="static/images/prs_3_context.png"
+                  alt="Resulting sparse scene context at KSFO" loading="lazy" />
+                <p class="figure-caption">3. Sparse context of local segments and distant but reachable structures</p>
+              </div>
+            </div>
             <p class="figure-caption">
-              Overview of the DESCENT architecture. PRS-based airfield map sampling provides the map context for the current focal agent position. Agent observations $O$ and airfield segments $S$ are encoded by $f_M$ and $f_A$; positional $P_\text{emb}$ and type $T_\text{emb}$ embeddings form the scene context $C$, which is encoded by $f_S$. The decoder $f_D$ uses learnable queries $Q$ to produce output trajectories $T$ and probability scores $P$.
+              PRS-based context sampling at KSFO. The selection reflects the agent's operational constraints,
+              prioritizing high-velocity paths such as runways over distant, unreachable taxiways.
             </p>
           </div>
-
-          <h3 class="title is-4 results-subtitle">Potential Reachable Set Sampling</h3>
-          <div class="content has-text-left motivation-section">
-            <p>
-              To extract the environmental context for a given vehicle, we first identify its current segment. Candidates are selected by Euclidean distance and refined by a heading consistency constraint, which avoids incorrect associations in dense intersection areas: if the closest segment's orientation deviates significantly from the vehicle's heading, the next $n$ candidates are evaluated, defaulting to the closest segment only if no angular match is found. From the current segment, a depth-first traversal of the lane graph &mdash; constrained by domain-specific length thresholds &mdash; enumerates all admissible paths. These are precomputed offline and stored as segment-ID metadata, so the map can be filtered at test time with minimal computational overhead. A backward traversal from the focal agent's current position additionally incorporates historical path context.
-            </p>
-          </div>
-          <div class="columns is-centered is-multiline">
-            <div class="column is-3">
-              <img class="result-image prs-image" src="static/images/prs_1_current_segment.png" alt="Locating the agent's current airfield segment at KSFO" loading="lazy"/>
-              <p class="figure-caption">1. Locate the agent's current airfield segment</p>
-            </div>
-            <div class="column is-3">
-              <img class="result-image prs-image" src="static/images/prs_2_traversal.png" alt="Graph traversal identifying reachable pathways at KSFO" loading="lazy"/>
-              <p class="figure-caption">2. Traverse the lane graph to identify reachable pathways</p>
-            </div>
-            <div class="column is-3">
-              <img class="result-image prs-image" src="static/images/prs_3_context.png" alt="Resulting sparse scene context at KSFO" loading="lazy"/>
-              <p class="figure-caption">3. Sparse context of local segments and distant but reachable structures</p>
-            </div>
-          </div>
-          <p class="figure-caption">
-            PRS-based context sampling at KSFO. The selection reflects the agent's operational constraints, prioritizing high-velocity paths such as runways over distant, unreachable taxiways.
-          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section hero">
-    <div class="container is-fullhd has-text-centered">
-      <h2 class="title is-3">Evaluation Setup</h2>
-      <div class="columns is-centered">
-        <div class="column is-11">
-          <div class="content has-text-left motivation-section">
-            <p>
-              We train and evaluate on the <strong>Amelia-10</strong> benchmark, which covers ten U.S. airports (KBOS, KDCA, KEWR, KJFK, KLAX, KMDW, KMSY, KSEA, KSFO, PANC) with differing runway layouts, terminal configurations, and traffic densities. We follow the official preprocessing pipeline and the benchmark protocol: a sampling rate of 1&nbsp;Hz, a past observation length of $H_p = 10\,\text{s}$ ($T_h = 10$ input steps), a prediction horizon of $H_f = 50\,\text{s}$ ($T_f = 50$ output steps), and $k = 4$ trajectory modes. Results are reported as minimum Average Displacement Error (mADE) and minimum Final Displacement Error (mFDE) in meters, for the 20&nbsp;s and 50&nbsp;s horizons.
-            </p>
-            <p>
-              Two focal agent selection strategies are evaluated: the <strong>random</strong> baseline, and a <strong>criticality-based</strong> strategy that prioritizes agents near potential conflict points while down-weighting stationary agents. The critical-agent evaluation set exhibits substantially higher variability and interaction complexity. As a baseline, we re-run Amelia-TF from the official codebase and pretrained weights, since the framework has undergone several refactorings and currently reproducible results differ from those originally reported &mdash; this ensures a fair comparison on identical data splits.
-            </p>
+    <section class="section hero">
+      <div class="container is-fullhd has-text-centered">
+        <h2 class="title is-3">Evaluation Setup</h2>
+        <div class="columns is-centered">
+          <div class="column is-11">
+            <div class="content has-text-left motivation-section">
+              <p>
+                We train and evaluate on the <strong>Amelia-10</strong> benchmark, which covers ten U.S. airports (KBOS,
+                KDCA, KEWR, KJFK, KLAX, KMDW, KMSY, KSEA, KSFO, PANC) with differing runway layouts, terminal
+                configurations, and traffic densities. We follow the official preprocessing pipeline and the benchmark
+                protocol: a sampling rate of 1&nbsp;Hz, a past observation length of $H_p = 10\,\text{s}$ ($T_h = 10$
+                input steps), a prediction horizon of $H_f = 50\,\text{s}$ ($T_f = 50$ output steps), and $k = 4$
+                trajectory modes. Results are reported as minimum Average Displacement Error (mADE) and minimum Final
+                Displacement Error (mFDE) in meters, for the 20&nbsp;s and 50&nbsp;s horizons.
+              </p>
+              <p>
+                Two focal agent selection strategies are evaluated: the <strong>random</strong> baseline, and a
+                <strong>criticality-based</strong> strategy that prioritizes agents near potential conflict points while
+                down-weighting stationary agents. The critical-agent evaluation set exhibits substantially higher
+                variability and interaction complexity. As a baseline, we re-run Amelia-TF from the official codebase
+                and pretrained weights, since the framework has undergone several refactorings and currently
+                reproducible results differ from those originally reported &mdash; this ensures a fair comparison on
+                identical data splits.
+              </p>
+            </div>
+            <div class="content has-text-centered">
+              <img class="result-image dataset-figure" src="static/images/dataset_endpoints.png"
+                alt="Distribution of future trajectory endpoints for random versus critical focal agents"
+                loading="lazy" />
+              <img class="result-image dataset-figure" src="static/images/dataset_speed_vs_length.png"
+                alt="Current agent speed versus future trajectory length for random versus critical focal agents"
+                loading="lazy" style="margin-top: 1rem;" />
+              <p class="figure-caption">
+                Random vs. critical focal agent sampling in Amelia-10. Top: the distribution of future trajectory
+                endpoints is markedly more diverse for critical agents. Bottom: critical agents show higher dynamic
+                changes &mdash; low initial speed with long future trajectories (acceleration) and high initial speed
+                with short future paths (braking) &mdash; compared to the more linear correlation seen for random
+                agents.
+              </p>
+            </div>
           </div>
-          <div class="content has-text-centered">
-            <img class="result-image dataset-figure" src="static/images/dataset_endpoints.png" alt="Distribution of future trajectory endpoints for random versus critical focal agents" loading="lazy"/>
-            <img class="result-image dataset-figure" src="static/images/dataset_speed_vs_length.png" alt="Current agent speed versus future trajectory length for random versus critical focal agents" loading="lazy" style="margin-top: 1rem;"/>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-fullhd has-text-centered">
+        <h2 class="title is-3">Results</h2>
+        <div class="columns is-centered">
+          <div class="column is-11">
+
+            <h3 class="title is-4 results-subtitle">Single Airport &mdash; Critical Agents</h3>
+            <div class="results-table-wrapper">
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Method</th>
+                    <th>KMDW</th>
+                    <th>KEWR</th>
+                    <th>KBOS</th>
+                    <th>KSFO*</th>
+                    <th>KSEA*</th>
+                    <th>KDCA</th>
+                    <th>PANC</th>
+                    <th>KLAX</th>
+                    <th>KMSY</th>
+                    <th>KJFK</th>
+                    <th class="col-avg">Avg&dagger;</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="metric-start">
+                    <td rowspan="2"><strong>mFDE@50s</strong></td>
+                    <td>Amelia-TF</td>
+                    <td>66.69</td>
+                    <td>91.18</td>
+                    <td>81.61</td>
+                    <td>&ndash;</td>
+                    <td>&ndash;</td>
+                    <td>105.60</td>
+                    <td>170.48</td>
+                    <td>137.40</td>
+                    <td>87.46</td>
+                    <td>102.77</td>
+                    <td class="col-avg">105.40</td>
+                  </tr>
+                  <tr class="ours">
+                    <td>DESCENT (Ours)</td>
+                    <td>59.64</td>
+                    <td>77.74</td>
+                    <td>64.49</td>
+                    <td>56.60</td>
+                    <td>61.45</td>
+                    <td>54.04</td>
+                    <td>67.13</td>
+                    <td>64.50</td>
+                    <td>68.98</td>
+                    <td>78.67</td>
+                    <td class="col-avg">66.90</td>
+                  </tr>
+                  <tr class="metric-start">
+                    <td rowspan="2"><strong>mADE@50s</strong></td>
+                    <td>Amelia-TF</td>
+                    <td>26.41</td>
+                    <td>32.88</td>
+                    <td>30.79</td>
+                    <td>&ndash;</td>
+                    <td>&ndash;</td>
+                    <td>39.24</td>
+                    <td>61.35</td>
+                    <td>50.74</td>
+                    <td>31.41</td>
+                    <td>39.23</td>
+                    <td class="col-avg">39.01</td>
+                  </tr>
+                  <tr class="ours">
+                    <td>DESCENT (Ours)</td>
+                    <td>24.88</td>
+                    <td>31.69</td>
+                    <td>26.80</td>
+                    <td>23.22</td>
+                    <td>24.79</td>
+                    <td>25.46</td>
+                    <td>28.41</td>
+                    <td>27.43</td>
+                    <td>27.39</td>
+                    <td>33.56</td>
+                    <td class="col-avg">28.20</td>
+                  </tr>
+                  <tr class="metric-start">
+                    <td rowspan="2"><strong>mFDE@20s</strong></td>
+                    <td>Amelia-TF</td>
+                    <td>13.35</td>
+                    <td>15.78</td>
+                    <td>14.74</td>
+                    <td>&ndash;</td>
+                    <td>&ndash;</td>
+                    <td>20.20</td>
+                    <td>28.08</td>
+                    <td>25.79</td>
+                    <td>14.65</td>
+                    <td>19.82</td>
+                    <td class="col-avg">19.05</td>
+                  </tr>
+                  <tr class="ours">
+                    <td>DESCENT (Ours)</td>
+                    <td>13.60</td>
+                    <td>17.20</td>
+                    <td>14.25</td>
+                    <td>12.40</td>
+                    <td>12.68</td>
+                    <td>15.76</td>
+                    <td>15.44</td>
+                    <td>15.21</td>
+                    <td>14.88</td>
+                    <td>19.29</td>
+                    <td class="col-avg">15.70</td>
+                  </tr>
+                  <tr class="metric-start">
+                    <td rowspan="2"><strong>mADE@20s</strong></td>
+                    <td>Amelia-TF</td>
+                    <td>6.94</td>
+                    <td>7.79</td>
+                    <td>7.33</td>
+                    <td>&ndash;</td>
+                    <td>&ndash;</td>
+                    <td>10.26</td>
+                    <td>14.55</td>
+                    <td>12.15</td>
+                    <td>7.36</td>
+                    <td>9.65</td>
+                    <td class="col-avg">9.50</td>
+                  </tr>
+                  <tr class="ours">
+                    <td>DESCENT (Ours)</td>
+                    <td>7.23</td>
+                    <td>8.86</td>
+                    <td>7.32</td>
+                    <td>6.49</td>
+                    <td>6.64</td>
+                    <td>8.63</td>
+                    <td>8.06</td>
+                    <td>8.21</td>
+                    <td>7.86</td>
+                    <td>9.80</td>
+                    <td class="col-avg">8.25</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              Errors in meters, evaluating the most critical agent per scenario. *No checkpoints available for the
+              official, refactored codebase. &dagger;Average excluding KSFO and KSEA.
+            </p>
+            <div class="content has-text-left motivation-section">
+              <p>
+                In safety-critical scenarios and at the long 50&nbsp;s horizon, DESCENT significantly outperforms the
+                Amelia-TF baseline, underscoring its ability to capture long-range contextual dependencies and complex
+                scene interactions. At the shorter 20&nbsp;s horizon the gap narrows and results are largely comparable,
+                as short-term predictions are inherently less challenging and sparse heterogeneous context matters less
+                when agents stay within a limited spatial vicinity. Per-airport accuracy correlates with the average
+                spatial extent of ground-truth trajectories: future trajectories at KMDW average roughly 430&nbsp;m,
+                whereas airports with higher absolute errors such as PANC and KLAX exceed 700&nbsp;m.
+              </p>
+            </div>
+
+            <h3 class="title is-4 results-subtitle">Single Airport &mdash; Random Agents</h3>
+            <div class="results-table-wrapper">
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Method</th>
+                    <th>KMDW</th>
+                    <th>KEWR</th>
+                    <th>KBOS</th>
+                    <th>KSFO*</th>
+                    <th>KSEA*</th>
+                    <th>KDCA</th>
+                    <th>PANC</th>
+                    <th>KLAX</th>
+                    <th>KMSY</th>
+                    <th>KJFK</th>
+                    <th class="col-avg">Avg</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="metric-start">
+                    <td rowspan="2"><strong>mFDE@50s</strong></td>
+                    <td>Amelia-TF</td>
+                    <td>27.52</td>
+                    <td>52.06</td>
+                    <td>51.01</td>
+                    <td>40.23</td>
+                    <td>65.82</td>
+                    <td>47.75</td>
+                    <td>86.24</td>
+                    <td>89.46</td>
+                    <td>29.84</td>
+                    <td>55.32</td>
+                    <td class="col-avg">54.52</td>
+                  </tr>
+                  <tr class="ours">
+                    <td>DESCENT (Ours)</td>
+                    <td>25.23</td>
+                    <td>48.80</td>
+                    <td>42.23</td>
+                    <td>37.11</td>
+                    <td>39.56</td>
+                    <td>27.92</td>
+                    <td>44.14</td>
+                    <td>45.17</td>
+                    <td>24.63</td>
+                    <td>46.27</td>
+                    <td class="col-avg">38.11</td>
+                  </tr>
+                  <tr class="metric-start">
+                    <td rowspan="2"><strong>mADE@50s</strong></td>
+                    <td>Amelia-TF</td>
+                    <td>11.80</td>
+                    <td>20.96</td>
+                    <td>20.47</td>
+                    <td>17.05</td>
+                    <td>29.94</td>
+                    <td>18.93</td>
+                    <td>34.90</td>
+                    <td>35.84</td>
+                    <td>11.42</td>
+                    <td>22.43</td>
+                    <td class="col-avg">22.37</td>
+                  </tr>
+                  <tr class="ours">
+                    <td>DESCENT (Ours)</td>
+                    <td>11.37</td>
+                    <td>21.34</td>
+                    <td>18.35</td>
+                    <td>15.81</td>
+                    <td>17.51</td>
+                    <td>13.21</td>
+                    <td>20.34</td>
+                    <td>20.24</td>
+                    <td>10.38</td>
+                    <td>20.51</td>
+                    <td class="col-avg">16.91</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              Errors in meters, evaluating a random agent per scenario. *No checkpoints available for the official,
+              refactored codebase; values taken from the reported results.
+            </p>
+            <div class="content has-text-left motivation-section">
+              <p>
+                With random focal agents the task is less challenging, resulting in generally lower errors than in the
+                critical-agent setup. DESCENT nevertheless retains a clear advantage, particularly for long-term
+                prediction as measured by mFDE, and achieves better or comparable mADE across all evaluated airports
+                &mdash; further validating the robustness of the PRS-based context sampling.
+              </p>
+            </div>
+
+            <h3 class="title is-4 results-subtitle">Multi-Airport Model</h3>
+            <div class="results-table-wrapper">
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th>Method</th>
+                    <th>KMDW</th>
+                    <th>KEWR</th>
+                    <th>KBOS</th>
+                    <th>KSFO</th>
+                    <th>KSEA</th>
+                    <th>KDCA</th>
+                    <th>PANC</th>
+                    <th>KLAX</th>
+                    <th>KMSY</th>
+                    <th>KJFK</th>
+                    <th class="col-avg">Avg</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="ours metric-start">
+                    <td><strong>mFDE@50s</strong></td>
+                    <td>DESCENT (Ours)</td>
+                    <td>29.73</td>
+                    <td>50.37</td>
+                    <td>47.94</td>
+                    <td>44.23</td>
+                    <td>46.50</td>
+                    <td>29.99</td>
+                    <td>53.46</td>
+                    <td>51.08</td>
+                    <td>23.31</td>
+                    <td>41.48</td>
+                    <td class="col-avg">41.81</td>
+                  </tr>
+                  <tr class="ours">
+                    <td><strong>mADE@50s</strong></td>
+                    <td>DESCENT (Ours)</td>
+                    <td>13.01</td>
+                    <td>21.57</td>
+                    <td>20.39</td>
+                    <td>18.83</td>
+                    <td>20.35</td>
+                    <td>14.01</td>
+                    <td>24.08</td>
+                    <td>22.75</td>
+                    <td>10.10</td>
+                    <td>17.85</td>
+                    <td class="col-avg">18.28</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              A single model trained jointly on all Amelia-10 airports. Errors in meters, evaluating a random agent per
+              scenario.
+            </p>
+            <div class="content has-text-left motivation-section">
+              <p>
+                The jointly trained model surpasses the specialized per-airport models at KJFK and KMSY, likely due to
+                the increased diversity of training scenarios, and nearly matches them elsewhere. Degradation is most
+                pronounced at PANC and KLAX, two of the most challenging airports in the dataset, indicating that
+                airfields with highly unique operational patterns can still favor specialized models.
+              </p>
+            </div>
+
+            <h3 class="title is-4 results-subtitle">Ablation: Scene Context Sampling</h3>
+            <div class="results-table-wrapper">
+              <table class="results-table">
+                <thead>
+                  <tr>
+                    <th>Scene Context Sampling</th>
+                    <th>KBOS</th>
+                    <th>KSFO</th>
+                    <th>PANC</th>
+                    <th class="col-avg">Avg</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="metric-start">
+                    <td>Top-K closest (50 segments)</td>
+                    <td>129.82</td>
+                    <td>122.75</td>
+                    <td>169.92</td>
+                    <td class="col-avg">140.83</td>
+                  </tr>
+                  <tr>
+                    <td>Radius-based (0.3 km)</td>
+                    <td>86.95</td>
+                    <td>80.44</td>
+                    <td>107.69</td>
+                    <td class="col-avg">91.70</td>
+                  </tr>
+                  <tr class="ours">
+                    <td>PRS-based (Ours)</td>
+                    <td>64.49</td>
+                    <td>56.60</td>
+                    <td>67.13</td>
+                    <td class="col-avg">62.74</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="table-note">
+              mFDE@50s in meters on the respective test sets, using the most critical agent per scenario, for an easy
+              (KSFO), a medium (KBOS), and the most challenging (PANC) airport.
+            </p>
+            <div class="content has-text-left motivation-section">
+              <p>
+                PRS-based sampling outperforms both standard strategies at every airport, reducing the average mFDE@50s
+                by 32% relative to radius-based sampling and by 55% relative to top-<i>k</i> nearest segments.
+              </p>
+            </div>
+
+            <h3 class="title is-4 results-subtitle">Model Complexity and Latency</h3>
+            <div class="stat-grid">
+              <div class="stat-card">
+                <span class="stat-value">3.2M</span>
+                <span class="stat-label">parameters<br>Amelia-TF: 89.8M</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">32&nbsp;ms</span>
+                <span class="stat-label">32 agents<br>Amelia-TF: 16&nbsp;ms</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">68&nbsp;ms</span>
+                <span class="stat-label">64 agents<br>Amelia-TF: 36&nbsp;ms</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">132&nbsp;ms</span>
+                <span class="stat-label">128 agents<br>Amelia-TF: 76&nbsp;ms</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-value">75%</span>
+                <span class="stat-label">smaller scene input<br>than the complete map</span>
+              </div>
+            </div>
+            <p class="table-note" style="text-align: center; margin-top: 1rem;">
+              Latencies measured on an NVIDIA L40 GPU. Latent dimension $D = 128$ (Amelia-TF: $D = 256$).
+            </p>
+
+            <h3 class="title is-4 results-subtitle">Qualitative Results</h3>
+            <div class="columns is-centered is-multiline">
+              <div class="column is-4">
+                <img class="result-image" src="static/images/result_kbos_00000.png"
+                  alt="DESCENT prediction on a KBOS scenario" loading="lazy" />
+              </div>
+              <div class="column is-4">
+                <img class="result-image" src="static/images/result_kbos_00017.png"
+                  alt="DESCENT prediction on a KBOS scenario" loading="lazy" />
+              </div>
+              <div class="column is-4">
+                <img class="result-image" src="static/images/result_kbos_00035.png"
+                  alt="DESCENT prediction on a KBOS scenario" loading="lazy" />
+              </div>
+              <div class="column is-4">
+                <img class="result-image" src="static/images/result_kbos_00031.png"
+                  alt="DESCENT prediction on a KBOS scenario" loading="lazy" />
+              </div>
+              <div class="column is-4">
+                <img class="result-image" src="static/images/result_kbos_00103.png"
+                  alt="DESCENT prediction on a KBOS scenario" loading="lazy" />
+              </div>
+              <div class="column is-4">
+                <img class="result-image" src="static/images/result_kbos_00039.png"
+                  alt="DESCENT prediction on a KBOS scenario" loading="lazy" />
+              </div>
+            </div>
             <p class="figure-caption">
-              Random vs. critical focal agent sampling in Amelia-10. Top: the distribution of future trajectory endpoints is markedly more diverse for critical agents. Bottom: critical agents show higher dynamic changes &mdash; low initial speed with long future trajectories (acceleration) and high initial speed with short future paths (braking) &mdash; compared to the more linear correlation seen for random agents.
+              $50\,\text{s}$ DESCENT predictions (colored lines) alongside the $10\,\text{s}$ historical focal agent
+              movement (black), surrounding agent histories (light gray), the ground truth future trajectory (thick,
+              dark gray), and airfield map context. Predictions with confidence scores below 0.15 are omitted for
+              clarity. Scenarios are sampled from the KBOS test set of Amelia-10. Best viewed with zoom.
             </p>
+
+            <h3 class="title is-4 results-subtitle">Prediction Rollouts</h3>
+            <div class="content has-text-left motivation-section">
+              <p>
+                The clips below roll out the full $50\,\text{s}$ prediction horizon step by step for scenarios from the
+                KBOS test set. Black dots mark the observed $10\,\text{s}$ history of the focal agent, the thick gray
+                line the ground truth future, and the colored lines the trajectory hypotheses produced by DESCENT.
+              </p>
+            </div>
+            <div class="video-container columns is-centered is-multiline">
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/succ_kbos_00035.jpg">
+                  <source src="static/videos/clips_succ/succ_kbos_00035.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/succ_kbos_00062.jpg">
+                  <source src="static/videos/clips_succ/succ_kbos_00062.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/succ_kbos_00111.jpg">
+                  <source src="static/videos/clips_succ/succ_kbos_00111.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/succ_kbos_00114.jpg">
+                  <source src="static/videos/clips_succ/succ_kbos_00114.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/succ_kbos_00119.jpg">
+                  <source src="static/videos/clips_succ/succ_kbos_00119.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/succ_kbos_00122.jpg">
+                  <source src="static/videos/clips_succ/succ_kbos_00122.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <p class="figure-caption">
+              Successful predictions across taxiing, takeoff, and landing phases. Basemap &copy; OpenStreetMap
+              contributors.
+            </p>
+
+            <h3 class="title is-4 results-subtitle">Failure Cases</h3>
+            <div class="content has-text-left motivation-section">
+              <p>
+                Multimodal forecasting cannot resolve every intent. The clips below show scenarios in which none of the
+                $k = 4$ hypotheses tracks the executed maneuver &mdash; typically when an agent takes an unexpected
+                branch at an intersection, or when its dynamics change abruptly within the horizon.
+              </p>
+            </div>
+            <div class="video-container columns is-centered is-multiline">
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/fail_kbos_00010.jpg">
+                  <source src="static/videos/clips_fail/fail_kbos_00010.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/fail_kbos_00030.jpg">
+                  <source src="static/videos/clips_fail/fail_kbos_00030.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/fail_kbos_00065.jpg">
+                  <source src="static/videos/clips_fail/fail_kbos_00065.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/fail_kbos_00089.jpg">
+                  <source src="static/videos/clips_fail/fail_kbos_00089.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/fail_kbos_00096.jpg">
+                  <source src="static/videos/clips_fail/fail_kbos_00096.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="column is-4">
+                <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none"
+                  poster="static/images/posters/fail_kbos_00121.jpg">
+                  <source src="static/videos/clips_fail/fail_kbos_00121.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
+            <p class="figure-caption">
+              Failure cases on the KBOS test set. Basemap &copy; OpenStreetMap contributors.
+            </p>
+
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section hero is-light">
-    <div class="container is-fullhd has-text-centered">
-      <h2 class="title is-3">Results</h2>
-      <div class="columns is-centered">
-        <div class="column is-11">
-
-          <h3 class="title is-4 results-subtitle">Single Airport &mdash; Critical Agents</h3>
-          <div class="results-table-wrapper">
-            <table class="results-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Method</th>
-                  <th>KMDW</th><th>KEWR</th><th>KBOS</th><th>KSFO*</th><th>KSEA*</th>
-                  <th>KDCA</th><th>PANC</th><th>KLAX</th><th>KMSY</th><th>KJFK</th>
-                  <th class="col-avg">Avg&dagger;</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="metric-start">
-                  <td rowspan="2"><strong>mFDE@50s</strong></td>
-                  <td>Amelia-TF</td>
-                  <td>66.69</td><td>91.18</td><td>81.61</td><td>&ndash;</td><td>&ndash;</td>
-                  <td>105.60</td><td>170.48</td><td>137.40</td><td>87.46</td><td>102.77</td>
-                  <td class="col-avg">105.40</td>
-                </tr>
-                <tr class="ours">
-                  <td>DESCENT (Ours)</td>
-                  <td>59.64</td><td>77.74</td><td>64.49</td><td>56.60</td><td>61.45</td>
-                  <td>54.04</td><td>67.13</td><td>64.50</td><td>68.98</td><td>78.67</td>
-                  <td class="col-avg">66.90</td>
-                </tr>
-                <tr class="metric-start">
-                  <td rowspan="2"><strong>mADE@50s</strong></td>
-                  <td>Amelia-TF</td>
-                  <td>26.41</td><td>32.88</td><td>30.79</td><td>&ndash;</td><td>&ndash;</td>
-                  <td>39.24</td><td>61.35</td><td>50.74</td><td>31.41</td><td>39.23</td>
-                  <td class="col-avg">39.01</td>
-                </tr>
-                <tr class="ours">
-                  <td>DESCENT (Ours)</td>
-                  <td>24.88</td><td>31.69</td><td>26.80</td><td>23.22</td><td>24.79</td>
-                  <td>25.46</td><td>28.41</td><td>27.43</td><td>27.39</td><td>33.56</td>
-                  <td class="col-avg">28.20</td>
-                </tr>
-                <tr class="metric-start">
-                  <td rowspan="2"><strong>mFDE@20s</strong></td>
-                  <td>Amelia-TF</td>
-                  <td>13.35</td><td>15.78</td><td>14.74</td><td>&ndash;</td><td>&ndash;</td>
-                  <td>20.20</td><td>28.08</td><td>25.79</td><td>14.65</td><td>19.82</td>
-                  <td class="col-avg">19.05</td>
-                </tr>
-                <tr class="ours">
-                  <td>DESCENT (Ours)</td>
-                  <td>13.60</td><td>17.20</td><td>14.25</td><td>12.40</td><td>12.68</td>
-                  <td>15.76</td><td>15.44</td><td>15.21</td><td>14.88</td><td>19.29</td>
-                  <td class="col-avg">15.70</td>
-                </tr>
-                <tr class="metric-start">
-                  <td rowspan="2"><strong>mADE@20s</strong></td>
-                  <td>Amelia-TF</td>
-                  <td>6.94</td><td>7.79</td><td>7.33</td><td>&ndash;</td><td>&ndash;</td>
-                  <td>10.26</td><td>14.55</td><td>12.15</td><td>7.36</td><td>9.65</td>
-                  <td class="col-avg">9.50</td>
-                </tr>
-                <tr class="ours">
-                  <td>DESCENT (Ours)</td>
-                  <td>7.23</td><td>8.86</td><td>7.32</td><td>6.49</td><td>6.64</td>
-                  <td>8.63</td><td>8.06</td><td>8.21</td><td>7.86</td><td>9.80</td>
-                  <td class="col-avg">8.25</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            Errors in meters, evaluating the most critical agent per scenario. *No checkpoints available for the official, refactored codebase. &dagger;Average excluding KSFO and KSEA.
-          </p>
-          <div class="content has-text-left motivation-section">
-            <p>
-              In safety-critical scenarios and at the long 50&nbsp;s horizon, DESCENT significantly outperforms the Amelia-TF baseline, underscoring its ability to capture long-range contextual dependencies and complex scene interactions. At the shorter 20&nbsp;s horizon the gap narrows and results are largely comparable, as short-term predictions are inherently less challenging and sparse heterogeneous context matters less when agents stay within a limited spatial vicinity. Per-airport accuracy correlates with the average spatial extent of ground-truth trajectories: future trajectories at KMDW average roughly 430&nbsp;m, whereas airports with higher absolute errors such as PANC and KLAX exceed 700&nbsp;m.
-            </p>
-          </div>
-
-          <h3 class="title is-4 results-subtitle">Single Airport &mdash; Random Agents</h3>
-          <div class="results-table-wrapper">
-            <table class="results-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Method</th>
-                  <th>KMDW</th><th>KEWR</th><th>KBOS</th><th>KSFO*</th><th>KSEA*</th>
-                  <th>KDCA</th><th>PANC</th><th>KLAX</th><th>KMSY</th><th>KJFK</th>
-                  <th class="col-avg">Avg</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="metric-start">
-                  <td rowspan="2"><strong>mFDE@50s</strong></td>
-                  <td>Amelia-TF</td>
-                  <td>27.52</td><td>52.06</td><td>51.01</td><td>40.23</td><td>65.82</td>
-                  <td>47.75</td><td>86.24</td><td>89.46</td><td>29.84</td><td>55.32</td>
-                  <td class="col-avg">54.52</td>
-                </tr>
-                <tr class="ours">
-                  <td>DESCENT (Ours)</td>
-                  <td>25.23</td><td>48.80</td><td>42.23</td><td>37.11</td><td>39.56</td>
-                  <td>27.92</td><td>44.14</td><td>45.17</td><td>24.63</td><td>46.27</td>
-                  <td class="col-avg">38.11</td>
-                </tr>
-                <tr class="metric-start">
-                  <td rowspan="2"><strong>mADE@50s</strong></td>
-                  <td>Amelia-TF</td>
-                  <td>11.80</td><td>20.96</td><td>20.47</td><td>17.05</td><td>29.94</td>
-                  <td>18.93</td><td>34.90</td><td>35.84</td><td>11.42</td><td>22.43</td>
-                  <td class="col-avg">22.37</td>
-                </tr>
-                <tr class="ours">
-                  <td>DESCENT (Ours)</td>
-                  <td>11.37</td><td>21.34</td><td>18.35</td><td>15.81</td><td>17.51</td>
-                  <td>13.21</td><td>20.34</td><td>20.24</td><td>10.38</td><td>20.51</td>
-                  <td class="col-avg">16.91</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            Errors in meters, evaluating a random agent per scenario. *No checkpoints available for the official, refactored codebase; values taken from the reported results.
-          </p>
-          <div class="content has-text-left motivation-section">
-            <p>
-              With random focal agents the task is less challenging, resulting in generally lower errors than in the critical-agent setup. DESCENT nevertheless retains a clear advantage, particularly for long-term prediction as measured by mFDE, and achieves better or comparable mADE across all evaluated airports &mdash; further validating the robustness of the PRS-based context sampling.
-            </p>
-          </div>
-
-          <h3 class="title is-4 results-subtitle">Multi-Airport Model</h3>
-          <div class="results-table-wrapper">
-            <table class="results-table">
-              <thead>
-                <tr>
-                  <th>Metric</th>
-                  <th>Method</th>
-                  <th>KMDW</th><th>KEWR</th><th>KBOS</th><th>KSFO</th><th>KSEA</th>
-                  <th>KDCA</th><th>PANC</th><th>KLAX</th><th>KMSY</th><th>KJFK</th>
-                  <th class="col-avg">Avg</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="ours metric-start">
-                  <td><strong>mFDE@50s</strong></td>
-                  <td>DESCENT (Ours)</td>
-                  <td>29.73</td><td>50.37</td><td>47.94</td><td>44.23</td><td>46.50</td>
-                  <td>29.99</td><td>53.46</td><td>51.08</td><td>23.31</td><td>41.48</td>
-                  <td class="col-avg">41.81</td>
-                </tr>
-                <tr class="ours">
-                  <td><strong>mADE@50s</strong></td>
-                  <td>DESCENT (Ours)</td>
-                  <td>13.01</td><td>21.57</td><td>20.39</td><td>18.83</td><td>20.35</td>
-                  <td>14.01</td><td>24.08</td><td>22.75</td><td>10.10</td><td>17.85</td>
-                  <td class="col-avg">18.28</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            A single model trained jointly on all Amelia-10 airports. Errors in meters, evaluating a random agent per scenario.
-          </p>
-          <div class="content has-text-left motivation-section">
-            <p>
-              The jointly trained model surpasses the specialized per-airport models at KJFK and KMSY, likely due to the increased diversity of training scenarios, and nearly matches them elsewhere. Degradation is most pronounced at PANC and KLAX, two of the most challenging airports in the dataset, indicating that airfields with highly unique operational patterns can still favor specialized models.
-            </p>
-          </div>
-
-          <h3 class="title is-4 results-subtitle">Ablation: Scene Context Sampling</h3>
-          <div class="results-table-wrapper">
-            <table class="results-table">
-              <thead>
-                <tr>
-                  <th>Scene Context Sampling</th>
-                  <th>KBOS</th><th>KSFO</th><th>PANC</th>
-                  <th class="col-avg">Avg</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="metric-start">
-                  <td>Top-K closest (50 segments)</td>
-                  <td>129.82</td><td>122.75</td><td>169.92</td>
-                  <td class="col-avg">140.83</td>
-                </tr>
-                <tr>
-                  <td>Radius-based (0.3 km)</td>
-                  <td>86.95</td><td>80.44</td><td>107.69</td>
-                  <td class="col-avg">91.70</td>
-                </tr>
-                <tr class="ours">
-                  <td>PRS-based (Ours)</td>
-                  <td>64.49</td><td>56.60</td><td>67.13</td>
-                  <td class="col-avg">62.74</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="table-note">
-            mFDE@50s in meters on the respective test sets, using the most critical agent per scenario, for an easy (KSFO), a medium (KBOS), and the most challenging (PANC) airport.
-          </p>
-          <div class="content has-text-left motivation-section">
-            <p>
-              PRS-based sampling outperforms both standard strategies at every airport, reducing the average mFDE@50s by 32% relative to radius-based sampling and by 55% relative to top-<i>k</i> nearest segments.
-            </p>
-          </div>
-
-          <h3 class="title is-4 results-subtitle">Model Complexity and Latency</h3>
-          <div class="stat-grid">
-            <div class="stat-card">
-              <span class="stat-value">3.2M</span>
-              <span class="stat-label">parameters<br>Amelia-TF: 89.8M</span>
+    <section class="hero is-small is-light" id="BibTeX">
+      <div class="container is-fullhd content hero-body">
+        <div class="columns is-centered">
+          <div class="column is-11">
+            <div class="bibtex-header">
+              <h2 class="title is-3">BibTeX</h2>
+              <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+                <i class="fas fa-copy"></i>
+                <span class="copy-text">Copy</span>
+              </button>
             </div>
-            <div class="stat-card">
-              <span class="stat-value">32&nbsp;ms</span>
-              <span class="stat-label">32 agents<br>Amelia-TF: 16&nbsp;ms</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value">68&nbsp;ms</span>
-              <span class="stat-label">64 agents<br>Amelia-TF: 36&nbsp;ms</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value">132&nbsp;ms</span>
-              <span class="stat-label">128 agents<br>Amelia-TF: 76&nbsp;ms</span>
-            </div>
-            <div class="stat-card">
-              <span class="stat-value">75%</span>
-              <span class="stat-label">smaller scene input<br>than the complete map</span>
-            </div>
-          </div>
-          <p class="table-note" style="text-align: center; margin-top: 1rem;">
-            Latencies measured on an NVIDIA L40 GPU. Latent dimension $D = 128$ (Amelia-TF: $D = 256$).
-          </p>
-
-          <h3 class="title is-4 results-subtitle">Qualitative Results</h3>
-          <div class="columns is-centered is-multiline">
-            <div class="column is-4">
-              <img class="result-image" src="static/images/result_kbos_00000.png" alt="DESCENT prediction on a KBOS scenario" loading="lazy"/>
-            </div>
-            <div class="column is-4">
-              <img class="result-image" src="static/images/result_kbos_00017.png" alt="DESCENT prediction on a KBOS scenario" loading="lazy"/>
-            </div>
-            <div class="column is-4">
-              <img class="result-image" src="static/images/result_kbos_00035.png" alt="DESCENT prediction on a KBOS scenario" loading="lazy"/>
-            </div>
-            <div class="column is-4">
-              <img class="result-image" src="static/images/result_kbos_00031.png" alt="DESCENT prediction on a KBOS scenario" loading="lazy"/>
-            </div>
-            <div class="column is-4">
-              <img class="result-image" src="static/images/result_kbos_00103.png" alt="DESCENT prediction on a KBOS scenario" loading="lazy"/>
-            </div>
-            <div class="column is-4">
-              <img class="result-image" src="static/images/result_kbos_00039.png" alt="DESCENT prediction on a KBOS scenario" loading="lazy"/>
-            </div>
-          </div>
-          <p class="figure-caption">
-            $50\,\text{s}$ DESCENT predictions (colored lines) alongside the $10\,\text{s}$ historical focal agent movement (black), surrounding agent histories (light gray), the ground truth future trajectory (thick, dark gray), and airfield map context. Predictions with confidence scores below 0.15 are omitted for clarity. Scenarios are sampled from the KBOS test set of Amelia-10. Best viewed with zoom.
-          </p>
-
-          <h3 class="title is-4 results-subtitle">Prediction Rollouts</h3>
-          <div class="content has-text-left motivation-section">
-            <p>
-              The clips below roll out the full $50\,\text{s}$ prediction horizon step by step for scenarios from the KBOS test set. Black dots mark the observed $10\,\text{s}$ history of the focal agent, the thick gray line the ground truth future, and the colored lines the trajectory hypotheses produced by DESCENT.
-            </p>
-          </div>
-          <div class="video-container columns is-centered is-multiline">
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/succ_kbos_00035.jpg">
-                <source src="static/videos/clips_succ/succ_kbos_00035.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/succ_kbos_00062.jpg">
-                <source src="static/videos/clips_succ/succ_kbos_00062.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/succ_kbos_00111.jpg">
-                <source src="static/videos/clips_succ/succ_kbos_00111.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/succ_kbos_00114.jpg">
-                <source src="static/videos/clips_succ/succ_kbos_00114.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/succ_kbos_00119.jpg">
-                <source src="static/videos/clips_succ/succ_kbos_00119.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/succ_kbos_00122.jpg">
-                <source src="static/videos/clips_succ/succ_kbos_00122.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-          <p class="figure-caption">
-            Successful predictions across taxiing, takeoff, and landing phases. Basemap &copy; OpenStreetMap contributors.
-          </p>
-
-          <h3 class="title is-4 results-subtitle">Failure Cases</h3>
-          <div class="content has-text-left motivation-section">
-            <p>
-              Multimodal forecasting cannot resolve every intent. The clips below show scenarios in which none of the $k = 4$ hypotheses tracks the executed maneuver &mdash; typically when an agent takes an unexpected branch at an intersection, or when its dynamics change abruptly within the horizon.
-            </p>
-          </div>
-          <div class="video-container columns is-centered is-multiline">
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/fail_kbos_00010.jpg">
-                <source src="static/videos/clips_fail/fail_kbos_00010.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/fail_kbos_00030.jpg">
-                <source src="static/videos/clips_fail/fail_kbos_00030.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/fail_kbos_00065.jpg">
-                <source src="static/videos/clips_fail/fail_kbos_00065.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/fail_kbos_00089.jpg">
-                <source src="static/videos/clips_fail/fail_kbos_00089.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/fail_kbos_00096.jpg">
-                <source src="static/videos/clips_fail/fail_kbos_00096.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <div class="column is-4">
-              <video class="result-video" width="2000" height="2000" controls loop muted playsinline preload="none" poster="static/images/posters/fail_kbos_00121.jpg">
-                <source src="static/videos/clips_fail/fail_kbos_00121.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-          <p class="figure-caption">
-            Failure cases on the KBOS test set. Basemap &copy; OpenStreetMap contributors.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="hero is-small is-light" id="BibTeX">
-    <div class="container is-fullhd content hero-body">
-      <div class="columns is-centered">
-        <div class="column is-11">
-          <div class="bibtex-header">
-            <h2 class="title is-3">BibTeX</h2>
-            <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-              <i class="fas fa-copy"></i>
-              <span class="copy-text">Copy</span>
-            </button>
-          </div>
-          <pre id="bibtex-code"><code>@inproceedings{prutsch2026descent,
+            <pre id="bibtex-code"><code>@inproceedings{prutsch2026descent,
   title     = {{DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction}},
   author    = {Prutsch, Alexander and Schinagl, David and Possegger, Horst},
   booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
   year      = {2026}
 }</code></pre>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-small">
-    <div class="container is-fullhd">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-11">
-          <div class="content">
-            <p>
-              This work was partially funded by the Austrian Research Promotion Agency (FFG) under the Take Off project SAFER (894164).
-            </p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer is-light">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-11">
-          <div class="content has-text-centered">
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
+    <section class="section hero is-small">
+      <div class="container is-fullhd">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-11">
+            <div class="content">
+              <p>
+                This work was partially funded by the Austrian Research Promotion Agency (FFG) under the Take Off
+                project SAFER (894164).
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </section>
+
+    <footer class="footer is-light">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-11">
+            <div class="content has-text-centered">
+              <p>
+                This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                  target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                  href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+                You are free to borrow the source code of this website, we just ask that you link back to this page in
+                the footer. <br> This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
   </main>
 </body>
+
 </html>
