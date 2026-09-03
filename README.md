@@ -7,7 +7,7 @@
 
 </div>
 
-> [**DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction**](https://arxiv.org/abs/2608.2600)  
+> [**DESCENT: Directed Edge Scene Encoding for Airport Surface Movement Prediction**](https://arxiv.org/abs/2608.26002)  
 > Alexander Prutsch, David Schinagl, Horst Possegger
 > **Graz University of Technology**  
 > **IROS 2026**
