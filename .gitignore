@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# dataset symlink and run outputs
+datasets/
+out/
+logs/
+
+# machine-specific config
+configs/local/default.yaml

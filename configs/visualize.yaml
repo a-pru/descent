@@ -1,0 +1,15 @@
+# @package _global_
+
+defaults:
+  - eval
+  - _self_
+
+task_name: "visualize"
+
+vis:
+  out_dir: ${paths.output_dir}/figures
+  num_scenes: 16
+  # plot every n-th scene of each batch
+  every_n: 8
+  # hide modes with a lower score (sigmoid output of the score head)
+  min_score: 0.15

@@ -1,0 +1,2 @@
+checkpoints/*.ckpt filter=lfs diff=lfs merge=lfs -text
+maps/*.pt filter=lfs diff=lfs merge=lfs -text

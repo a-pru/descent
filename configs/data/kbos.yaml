@@ -1,0 +1,7 @@
+defaults:
+  - default.yaml
+
+extra_params:
+  data_prep:
+    task: kbos
+    seen_airports: [kbos]

@@ -1,0 +1,31 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: kbos.yaml
+  - model: descent.yaml
+  - callbacks: default.yaml
+  - logger: tensorboard.yaml
+  - trainer: gpu.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+
+  # optional machine-specific overrides (configs/local/default.yaml, not versioned)
+  - optional local: default.yaml
+
+task_name: "train"
+tags: ["descent"]
+
+# set False to skip training
+train: True
+# evaluate the best checkpoint on the test split after training
+test: True
+
+compile: False
+
+# resume training from a full Lightning checkpoint; the default callbacks save weights only, so set
+# callbacks.model_checkpoint.save_weights_only=false in the run you want to resume
+ckpt_path: null
+
+seed: 42

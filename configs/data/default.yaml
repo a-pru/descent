@@ -1,0 +1,52 @@
+_target_: descent.data.datamodule.DataModule
+
+dataset:
+  _target_: descent.data.dataset.DescentDataset
+  config:
+    in_data_dir: ${paths.scenes_dir}
+    map_dir: ${paths.map_dir}
+
+    hist_len: 10
+    pred_lens: [20, 50]
+
+    # false: evaluate the first agent of the sampling order ('critical' agent, Table I)
+    # true:  evaluate a random one of the k agents ('random' agent, Tables II-III); training uses true
+    random_ego_agent: true
+
+    min_agents: 2
+    max_agents: 15
+
+    # agent order stored in the scene files; the first k_agents agents are kept
+    sampling_strategy: critical
+    supported_sampling_strategies: [random, kinematic, interactive, critical]
+    k_agents: 5
+
+    # keep every n-th train/val scenario (the released models use 2)
+    scenario_subsample: 2
+
+    seed: ${seed}
+
+extra_params:
+  batch_size: 128
+  num_workers: 6
+  prefetch_factor: 2
+  pin_memory: true
+  persistent_workers: true
+
+  data_prep:
+    in_data_dir: ${paths.in_data_dir}
+    # train/val/test lists of hour shards per airport (shipped in splits/)
+    splits_dir: ${paths.splits_dir}
+    # the split files of each run are written here
+    out_split_dir: ${paths.output_dir}/splits
+    exp_suffix: ${data.extra_params.data_prep.task}
+    task: all
+
+    seen_airports: [kbos, kdca, kewr, kjfk, klax, kmdw, kmsy, ksea, ksfo, panc]
+    unseen_airports: []
+
+    # fraction of each split file to use
+    to_process: 1.0
+    split_type: day
+
+  supported_airports: [kbos, kdca, kewr, kjfk, klax, kmdw, kmsy, ksea, ksfo, panc]

@@ -1,0 +1,7 @@
+defaults:
+  - default.yaml
+
+extra_params:
+  data_prep:
+    task: ksea
+    seen_airports: [ksea]

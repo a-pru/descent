@@ -1,0 +1,20 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: kbos.yaml
+  - model: descent.yaml
+  - logger: csv.yaml
+  - trainer: gpu.yaml
+  - paths: default.yaml
+  - extras: default.yaml
+  - hydra: default.yaml
+  - optional local: default.yaml
+
+task_name: "eval"
+tags: ["descent"]
+
+# released checkpoint of the airport in data.extra_params.data_prep.task
+ckpt_path: ${paths.root_dir}/checkpoints/${data.extra_params.data_prep.task}.ckpt
+
+seed: 42

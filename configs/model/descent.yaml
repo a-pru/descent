@@ -1,0 +1,30 @@
+_target_: descent.models.trajpred.TrajPred
+
+optimizer:
+  lr: 1e-4
+  weight_decay: 1e-1
+  beta1: 0.9
+  beta2: 0.95
+
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  _partial_: true
+  mode: min
+  factor: 0.1
+  patience: 10
+
+net:
+  _target_: descent.models.descent.Descent
+  hist_len: ${data.dataset.config.hist_len}
+  pred_lens: ${data.dataset.config.pred_lens}
+  embed_dim: 128
+  agent_enc_depth: 4
+  scene_enc_depth: 4
+  num_heads: 8
+  future_steps: 60
+  num_modes: 4
+  num_lane_types: 6
+
+extra_params:
+  seen_airports: ${data.extra_params.data_prep.seen_airports}
+  unseen_airports: ${data.extra_params.data_prep.unseen_airports}

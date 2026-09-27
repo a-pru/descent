@@ -1,0 +1,23 @@
+# PROJECT_ROOT is set by pyrootutils in the scripts (scripts/train.py, scripts/eval.py, ...).
+root_dir: ${oc.env:PROJECT_ROOT}
+
+# Amelia-10 dataset root (see README)
+base_dir: ${paths.root_dir}/datasets/amelia
+
+traj_data_version: a10v08
+traj_data_dir: ${paths.base_dir}/traj_data_${paths.traj_data_version}
+in_data_dir: ${paths.traj_data_dir}/raw_trajectories/
+scenes_dir: ${paths.traj_data_dir}/proc_full_scenes/
+assets_dir: ${paths.base_dir}/assets/
+
+# directed lane maps and SDFs (scripts/generate_maps.py)
+map_dir: ${paths.root_dir}/maps
+# day-based train/val/test splits used for the paper
+splits_dir: ${paths.root_dir}/splits
+
+out_dir: ${paths.root_dir}/out
+log_dir: ${paths.out_dir}/logs/
+
+# created by hydra for each run (configs/hydra/default.yaml)
+output_dir: ${hydra:runtime.output_dir}
+work_dir: ${hydra:runtime.cwd}
